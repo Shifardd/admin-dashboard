@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 .container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: min(300px, 40%) 1fr;
   grid-template-rows: 200px 1fr;
   grid-template-areas: 
   "sidebar header"
@@ -20,11 +21,53 @@
 }
 
 .sidebar {
-  background-color: lightblue;
+  background-color: rgb(66, 127, 239);
   grid-area: sidebar;
 }
 
 .main-content {
   background-color: gray;
   grid-area: main-content;
+}
+
+.sidebar {
+  padding: 15px;
+}
+
+.sidebar .logo {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .dashboard-icon {
+  width: 100%;
+  filter: invert(100%) sepia(2%) saturate(3739%) hue-rotate(144deg) brightness(93%) contrast(119%);
+}
+
+.sidebar h1 {
+  color: white;
+}
+
+.menu li {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sidebar .menu img {
+  width: 25px;
+  height: 25px;
+  justify-self: center;
+  filter: invert(100%) sepia(2%) saturate(3739%) hue-rotate(144deg) brightness(93%) contrast(119%);
+}
+
+.sidebar .menu a {
+  text-decoration: none;
+  color: #eff;
+  font-weight: 700;
 }
