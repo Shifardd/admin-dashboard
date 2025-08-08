@@ -28,12 +28,13 @@
 }
 
 .main-content {
-  background-color: gray;
+  background-color: #eee;
   grid-area: main-content;
 }
 
 .sidebar {
   padding: 15px;
+  z-index: 20;
 }
 
 .sidebar .logo {
@@ -76,6 +77,8 @@
 
 .header {
   padding: 25px 30px;
+  box-shadow: 0 3px 5px #aaa;
+  z-index: 10;
 }
 
 .header > div{
@@ -171,4 +174,76 @@
   border-radius: 18px;
   color: #eff;
   font-weight: 700;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 8fr 3fr;
+  grid-row: 1fr 1fr;
+  padding: 30px 20px;
+  gap: 15px;
+}
+
+.projects {
+  grid-row: 1 / 3;
+  grid-column: 1;
+}
+
+.projects h3 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.projects .all-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.projects .all-projects .project {
+  background-color: white;
+  height: 180px;
+  padding: 25px 20px;
+  border-left: 10px solid orange;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #aaa;
+}
+
+.projects .all-projects .options {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+
+.projects .all-projects .project .title {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.projects .all-projects .project .info {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.5;
+  height: 90px;
+}
+
+.projects .all-projects .project .options img {
+  width: 25px;
+  height: 25px;
+}
+
+
+.others {
+  display: grid;
+  grid-row: 1 / 3;
+  gap: 15px;
+}
+
+.announcement {
+  background-color: green;
+}
+
+.trending {
+  background-color: red;
 }
