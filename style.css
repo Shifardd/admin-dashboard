@@ -203,7 +203,7 @@
 
 .projects .all-projects .project {
   background-color: white;
-  height: 180px;
+  height: 225px;
   padding: 25px 20px;
   border-left: 10px solid orange;
   border-radius: 10px;
@@ -225,7 +225,7 @@
   font-size: 0.8rem;
   color: #555;
   line-height: 1.5;
-  height: 90px;
+  height: 120px;
 }
 
 .projects .all-projects .project .options img {
@@ -233,15 +233,38 @@
   height: 25px;
 }
 
-
 .others {
   display: grid;
   grid-row: 1 / 3;
+  grid-template-rows: 1fr 1fr;
   gap: 15px;
 }
 
 .announcement {
-  background-color: green;
+  margin-bottom: 0;
+}
+
+.announcement h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.announcement .contents {
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+
+.announcement p {
+  color: #555;
+  font-size: 0.75rem;
+  padding: 15px 0;
+}
+
+.announcement p strong {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 5px;
 }
 
 .trending {
