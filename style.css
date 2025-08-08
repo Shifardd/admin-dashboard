@@ -11,19 +11,19 @@
   height: 100vh;
   display: grid;
   grid-template-columns: min(300px, 40%) 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 170px 1fr;
   grid-template-areas: 
   "sidebar header"
   "sidebar main-content";
 }
 
 .header {
-  background-color: black;
+  background-color: white;
   grid-area: header;
 }
 
 .sidebar {
-  background-color: rgb(66, 127, 239);
+  background-color: rgb(35, 140, 225);
   grid-area: sidebar;
 }
 
@@ -70,6 +70,105 @@
 
 .sidebar .menu a {
   text-decoration: none;
+  color: #eff;
+  font-weight: 700;
+}
+
+.header {
+  padding: 25px 30px;
+}
+
+.header > div{
+  display: grid;
+  grid-template-columns: 3fr 350px;
+}
+
+.header .search, .header .notify {
+  display: flex;
+  align-items: center;
+}
+
+.header .search img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+}
+
+.header .search input {
+  background-color: #ccc;
+  border: none;
+  border-radius: 13px;
+  width: 85%;
+  min-width: 200px;
+  height: 25px;
+  padding-left: 10px;
+}
+
+.header .notify {
+  margin-left: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.header .notify img[alt="Notification icon"] {
+  filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+  width: 25px;
+  height: 25px;
+} 
+
+.header .notify img[alt="Profile picture"] {
+  filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+  width: 35px;
+  height: 35px;
+}
+
+.header .notify h3 {
+  color: #555;
+}
+
+.header .functionality {
+  display: grid;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.header .account img {
+  filter: invert(39%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(98%) contrast(88%);
+  width: 70px;
+  height: 70px;
+  padding: 0;
+}
+
+.header .account {
+  display: flex;
+  align-items: center;
+}
+
+.header .account p {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.header .account p span {
+  font-size: 1.25rem;
+}
+
+.header .buttons {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 50px;
+}
+
+.header .buttons button {
+  height: 35px;
+  background-color: rgb(35, 140, 225);
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
   color: #eff;
   font-weight: 700;
 }
